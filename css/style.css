@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -29,11 +29,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-size: 4.2rem;
+  font-size: 3.4rem;
 }
 
 h2 {
@@ -50,12 +50,12 @@ h2 {
   flex-wrap: wrap;
 }
 
-[class*="col"] {
+[class*='col'] {
   padding: 0 25px;
 }
 
 @media (max-width: 992px) {
-  [class*="col"] {
+  [class*='col'] {
     width: 100% !important;
   }
 }
@@ -92,6 +92,8 @@ h2 {
 
 .btn-primary:hover {
   opacity: 0.85;
+  background-color: var(--base-text) !important;
+  border-color: var(--base-text) !important;
 }
 
 .btn-secondary {
@@ -119,7 +121,7 @@ h2 {
   padding: 70px 0;
 }
 
-.main-section [class*="col"] {
+.main-section [class*='col'] {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -139,10 +141,18 @@ h2 {
 }
 
 .text-large {
-  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+.text-large,
+ul.offer > li {
+  font-size: 1.6rem;
   max-width: 90%;
   line-height: 2.2rem;
-  margin-bottom: 50px;
+}
+
+.text-large span {
+  color: var(--primary);
 }
 
 .brand .logo {
@@ -187,7 +197,7 @@ h2 {
 }
 
 .main-header h1 {
-  font-size: 4.2rem;
+  font-size: 3rem;
   margin-top: 0;
   margin-bottom: 35px;
 }
@@ -286,7 +296,7 @@ h2 {
   .service-item.service-item-reversed .arrow-wrapper {
     top: initial;
     bottom: 0;
-    border-top-left-radius:  15px;
+    border-top-left-radius: 15px;
     border-bottom-left-radius: 0;
   }
 }
