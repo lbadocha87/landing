@@ -144,6 +144,10 @@ h2 {
   margin-bottom: 50px;
 }
 
+ul.offer {
+  margin-bottom: 50px;
+}
+
 .text-large,
 ul.offer > li {
   font-size: 1.6rem;
@@ -153,6 +157,20 @@ ul.offer > li {
 
 .text-large span {
   color: var(--primary);
+}
+
+ul.up {
+  margin-bottom: 50px;
+}
+
+ul.up > li {
+  font-size: 1.3rem;
+  max-width: 90%;
+  line-height: 2.2rem;
+}
+
+.btn-up {
+  font-size: 1.6rem;
 }
 
 .brand .logo {
