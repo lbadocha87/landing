@@ -260,6 +260,7 @@ h2 {
   font-size: 4rem;
   width: 80%;
   height: 80%;
+  color: var(--primary);
   background-color: #f6f6f6;
   transform: rotate(45deg);
   display: flex;
