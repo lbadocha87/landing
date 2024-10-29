@@ -211,7 +211,7 @@ section {
 }
 
 .brand .logo {
-  height: 30px;
+  height: 50px;
 }
 
 .spaced-text {
@@ -481,6 +481,12 @@ ul.up > li {
   font-size: 1.3rem;
   max-width: 90%;
   line-height: 2.2rem;
+}
+
+ul.up-right > li {
+  font-size: 1.55rem;
+  background-position: left 5px;
+  line-height: 2.5rem;
 }
 
 /* Main Footer */
