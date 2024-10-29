@@ -54,13 +54,32 @@ ul:not(.nav-menu) li {
   background-image: url(../assets/icons/stars.svg);
   background-repeat: no-repeat;
   background-size: 0.8em;
-  background-position: left 8px;
+  background-position: left 0.5em;
   padding-left: 25px;
+  line-height: 2.2em;
+}
+
+section {
+  padding: 60px 0;
 }
 
 .container {
   max-width: 1240px;
   margin: auto;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    max-width: 992px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 740px;
+    margin: auto;
+  }
 }
 
 .row {
@@ -70,12 +89,12 @@ ul:not(.nav-menu) li {
 
 [class*="col"] {
   padding: 0 25px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 992px) {
   [class*="col"] {
     width: 100% !important;
-    margin-bottom: 30px;
   }
 }
 
@@ -91,8 +110,20 @@ ul:not(.nav-menu) li {
   width: 33.33%;
 }
 
+.col-50 {
+  width: 50%;
+}
+
 .col-66 {
   width: 66.66%;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .btn {
@@ -111,7 +142,6 @@ ul:not(.nav-menu) li {
 }
 
 .btn-primary:hover {
-  opacity: 0.85;
   background-color: var(--secondary) !important;
   border-color: var(--secondary) !important;
 }
@@ -137,6 +167,10 @@ ul:not(.nav-menu) li {
   border-color: var(--primary) !important;
 }
 
+.btn-large {
+  font-size: 1.5rem;
+}
+
 .main-section {
   padding: 70px 0;
 }
@@ -154,6 +188,7 @@ ul:not(.nav-menu) li {
   background-position: left center;
   background-size: 1em;
   padding-left: 25px;
+  display: inline-block;
 }
 
 .section-header h1,
@@ -167,16 +202,12 @@ ul:not(.nav-menu) li {
 
 .text-large {
   margin-bottom: 50px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   max-width: 90%;
 }
 
 .text-large span {
   color: var(--primary);
-}
-
-.btn-up {
-  font-size: 1.6rem;
 }
 
 .brand .logo {
@@ -210,6 +241,7 @@ ul:not(.nav-menu) li {
   display: flex;
   padding: 0;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .main-nav-container .nav-menu .nav-item {
@@ -222,13 +254,53 @@ ul:not(.nav-menu) li {
   color: var(--base-text);
 }
 
+@media (max-width: 992px) {
+  .main-nav-container .nav-menu {
+    display: block;
+  }
+
+  .main-nav-container .nav-menu {
+    text-align: left;
+  }
+
+  .main-nav-container .nav-menu .nav-item {
+    margin: 0;
+  }
+
+  .main-nav-container .nav-menu .nav-item a {
+    font-size: 1rem;
+  }
+}
+
 .main-nav-container .nav-menu .nav-item a:hover {
   color: var(--primary);
+}
+
+.main-nav-container .nav-menu .nav-item .btn-primary {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+}
+
+.main-nav-container .nav-menu .nav-item .btn-primary:hover {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
 }
 
 /* Main header */
 .main-header {
   padding: 120px 0;
+}
+
+@media (max-width: 1300px) {
+  .main-header {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-header {
+    padding: 60px 0;
+  }
 }
 
 .main-header h1 {
@@ -237,51 +309,107 @@ ul:not(.nav-menu) li {
   margin-bottom: 35px;
 }
 
-.main-header .btn {
-  font-size: 1.5rem;
-}
-
 .section-under-header {
   padding-top: 130px;
 }
 
-/* Services */
+@media (max-width: 1300px) {
+  .section-under-header {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-under-header {
+    padding-top: 60px;
+  }
+}
+
+/* Servicer */
+.services-wrapper {
+  margin-top: 50px;
+}
 
 .service-item {
+  background-color: #fff;
+  padding: 25px 15px;
+  border-radius: 15px;
+  display: flex;
+  border: 1px solid var(--secondary);
+}
+
+.service-item .service-icon-wrapper {
+  font-size: 2rem;
+  display: flex;
+  align-items: flex-start;
+  color: var(--secondary);
+  padding-right: 15px;
+}
+
+.service-item .service-content-wrapper h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+.service-call-to-action {
+  background-color: var(--primary);
+  height: 100%;
+  padding: 25px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s;
+  border: 1px solid var(--secondary);
+  justify-content: center;
+}
+
+.service-call-to-action:hover {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+/* About */
+
+.about-item {
   padding: 20px 15px;
   border-radius: 15px;
   position: relative;
   background-color: #f6f6f6;
 }
 
-.service-item h3,
-.service-item i {
+.about-item h3,
+.about-item i {
   color: var(--secondary);
 }
 
-.service-item h3 {
+.about-item h3 {
   margin-top: 5px;
   font-size: 1.9rem;
 }
 
-.service-item.service-item-reversed .service-icon-wrapper,
-.service-item p {
+.about-item.about-item-reversed .about-icon-wrapper,
+.about-item p {
   margin-bottom: 100px;
 }
 
-.service-item.service-item-reversed p {
+.about-item.about-item-reversed p {
   margin-bottom: initial;
 }
 
-.service-item .service-icon-wrapper {
+.about-item .about-icon-wrapper {
   padding: 10px;
 }
 
-.service-item .service-icon-wrapper .service-icon {
+.about-item .about-icon-wrapper .about-icon {
   font-size: 4.8rem;
 }
 
-.service-item .arrow-wrapper {
+.about-item .arrow-wrapper {
   position: absolute;
   right: 0;
   width: 120px;
@@ -294,14 +422,14 @@ ul:not(.nav-menu) li {
   align-items: center;
 }
 
-.service-item.service-item-reversed .arrow-wrapper {
+.about-item.about-item-reversed .arrow-wrapper {
   top: 0;
   bottom: initial;
   border-top-left-radius: 0;
   border-bottom-left-radius: 15px;
 }
 
-.service-item .arrow-wrapper i {
+.about-item .arrow-wrapper i {
   font-size: 4rem;
   width: 80%;
   height: 80%;
@@ -315,20 +443,20 @@ ul:not(.nav-menu) li {
 }
 
 @media (max-width: 992px) {
-  .service-item.service-item-reversed {
+  .about-item.about-item-reversed {
     display: flex;
     flex-direction: column-reverse;
   }
 
-  .service-item.service-item-reversed p {
+  .about-item.about-item-reversed p {
     margin-bottom: 100px;
   }
 
-  .service-item.service-item-reversed .service-icon-wrapper {
+  .about-item.about-item-reversed .about-icon-wrapper {
     margin-bottom: initial;
   }
 
-  .service-item.service-item-reversed .arrow-wrapper {
+  .about-item.about-item-reversed .arrow-wrapper {
     top: initial;
     bottom: 0;
     border-top-left-radius: 15px;
@@ -343,7 +471,6 @@ ul.offer {
 ul.offer > li {
   font-size: 1.6rem;
   max-width: 90%;
-  line-height: 2.2rem;
 }
 
 ul.up {
