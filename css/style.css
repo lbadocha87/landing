@@ -59,10 +59,6 @@ ul:not(.nav-menu) li {
   line-height: 2.2em;
 }
 
-section {
-  padding: 60px 0;
-}
-
 .container {
   max-width: 1240px;
   margin: auto;
@@ -171,8 +167,12 @@ section {
   font-size: 1.5rem;
 }
 
+.mt-50 {
+  margin-top: 50px;
+}
+
 .main-section {
-  padding: 70px 0;
+  padding: 60px 0;
 }
 
 .main-section [class*="col"] {
@@ -208,6 +208,11 @@ section {
 
 .text-large span {
   color: var(--primary);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
 }
 
 .brand .logo {
@@ -309,21 +314,13 @@ section {
   margin-bottom: 35px;
 }
 
-.section-under-header {
-  padding-top: 130px;
+.main-header .header-buttons .btn {
+  margin: 15px;
 }
 
-@media (max-width: 1300px) {
-  .section-under-header {
-    padding-top: 100px;
-  }
-}
-
-@media (max-width: 992px) {
-  .section-under-header {
-    padding-top: 60px;
-  }
-}
+.main-header .header-buttons .btn:first-child {
+  margin-left: 0;
+} 
 
 /* Servicer */
 .services-wrapper {
@@ -363,7 +360,7 @@ section {
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
   border: 1px solid var(--secondary);
   justify-content: center;
 }
@@ -469,7 +466,7 @@ ul.offer {
 }
 
 ul.offer > li {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   max-width: 90%;
 }
 
@@ -478,24 +475,23 @@ ul.up {
 }
 
 ul.up > li {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   max-width: 90%;
   line-height: 2.2rem;
 }
 
-ul.up-right > li {
-  font-size: 1.55rem;
-  background-position: left 5px;
-  line-height: 2.5rem;
-}
-
 /* Main Footer */
 .main-footer {
+  padding: 15px 0;
   background-color: var(--secondary);
 }
 
 .main-footer .main-nav-container .nav-menu .nav-item a {
   color: #fff;
+}
+
+.main-footer .main-nav-container .brand .logo {
+  height: 30px;
 }
 
 .main-footer .main-nav-container .nav-menu .nav-item a:hover {
