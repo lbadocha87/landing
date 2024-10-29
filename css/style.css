@@ -254,7 +254,7 @@ section {
   color: var(--base-text);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1300px) {
   .main-nav-container .nav-menu {
     display: block;
   }
