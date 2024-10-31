@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -116,6 +120,7 @@ ul:not(.nav-menu) li {
 
 .col-100 {
   width: 100%;
+  margin-bottom: 0;
 }
 
 .text-center {
@@ -178,6 +183,12 @@ ul:not(.nav-menu) li {
 .main-section [class*="col"] {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .main-section .col-image {
+    display: none;
+  }
 }
 
 .section-header .pre-title {
@@ -320,7 +331,24 @@ ul:not(.nav-menu) li {
 
 .main-header .header-buttons .btn:first-child {
   margin-left: 0;
-} 
+}
+
+@media (max-width: 1300px) {
+  .main-header .header-buttons .btn {
+    font-size: 1.3rem;
+    margin: 10px 3px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-header .header-image {
+    text-align: center;
+  }
+
+  .main-header .header-image img {
+    width: 50%;
+  }
+}
 
 /* Servicer */
 .services-wrapper {
@@ -461,23 +489,40 @@ ul:not(.nav-menu) li {
   }
 }
 
+
 ul.offer {
   margin-bottom: 50px;
 }
 
 ul.offer > li {
   font-size: 1.2rem;
-  max-width: 90%;
+}
+
+.up-right .btn {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .up-right .btn {
+    display: block;
+  }
 }
 
 ul.up {
   margin-bottom: 50px;
 }
 
+
 ul.up > li {
   font-size: 1.5rem;
-  max-width: 90%;
-  line-height: 2.2rem;
+  line-height: 2.3rem;
+  background-position: left 8px;
+}
+
+@media (max-width: 992px) {
+  ul.up {
+    margin-bottom: 0px;
+  }
 }
 
 /* Main Footer */
