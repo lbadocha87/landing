@@ -489,7 +489,6 @@ ul:not(.nav-menu) li {
   }
 }
 
-
 ul.offer {
   margin-bottom: 50px;
 }
@@ -512,7 +511,6 @@ ul.up {
   margin-bottom: 50px;
 }
 
-
 ul.up > li {
   font-size: 1.5rem;
   line-height: 2.3rem;
@@ -523,6 +521,29 @@ ul.up > li {
   ul.up {
     margin-bottom: 0px;
   }
+}
+
+.up-item {
+  padding: 20px 15px;
+  border-radius: 15px;
+  position: relative;
+  border: 1px solid var(--secondary);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.up-item .image-wrapper {
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+
+.up-item .image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 /* Main Footer */
