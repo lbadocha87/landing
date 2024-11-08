@@ -17,6 +17,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
 [data-slot] {
   display: inline;
 }
@@ -222,6 +223,10 @@ ul:not(.nav-menu) li {
 
 .text-large span {
   color: var(--primary);
+}
+
+.hidden-row {
+  display: none;
 }
 
 .brand {
@@ -536,12 +541,39 @@ ul.up > li {
   height: 100%;
 }
 
+.up-item.show-more {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.up-item.show-more:hover {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.up-item.show-more .image-wrapper,
+.up-item.show-more h3 {
+  display: none;
+}
+
+.up-item.show-more .show-more-text {
+  display: block;
+}
+
+.up-item:not(.show-more) .show-more-text {
+  display: none;
+}
+
 .up-item .image-wrapper {
   height: 200px;
   display: flex;
   align-items: center;
 }
-
 
 .up-item .image-wrapper img {
   height: 100%;
