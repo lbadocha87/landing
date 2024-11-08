@@ -17,6 +17,9 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+[data-slot] {
+  display: inline;
+}
 
 a {
   transition: color 0.3s;
